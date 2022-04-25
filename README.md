@@ -21,4 +21,5 @@ To verify the installation you must have a Gemfile.lock file in the folder.
 ## 3. Usage
 ```ruby
 $ ruby app.rb
+$ ruby app_2.rb
 ```
