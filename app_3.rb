@@ -24,12 +24,13 @@ while my_game.is_still_ongoing?
   # AFFICHER ETAT DU JOUEUR
   my_game.show_players
 
+  # INTEGRATION NOUVEAUX BOTS
+  my_game.new_players_in_sight
+
   # CHOIX DU JOUEUR
   my_game.menu
-  tab_choice = ["a","s","0","1","2","3"]
-  tab_choice = ["a","s","0","1","2"] if my_game.enemies.length == 3
-  tab_choice = ["a","s","0","1"] if my_game.enemies.length == 2
-  tab_choice = ["a","s","0"] if my_game.enemies.length == 1
+  tab_choice = ["a","s"]
+  my_game.enemies_in_sight.each_with_index {|player,i| tab_choice << "#{i}"}
   choice = gets.chomp
   puts ""
   until tab_choice.include?(choice)
